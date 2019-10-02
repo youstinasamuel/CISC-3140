@@ -1,0 +1,7 @@
+(define (reverse ls)
+(cond ((null? ls) '() )
+      (else (append (reverse (cdr ls)) (list car ls)))))
+(define (palindrome ls)
+(cond ((null? ls) 'true)
+      ((equal? (reverse ls) ls) 'true)
+      (else 'false)))
